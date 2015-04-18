@@ -1,0 +1,38 @@
+body {
+	background: #FFECDE; // this color is the background for the parallax - NOT the body background
+	font-family: $font-stack-main;
+	color: $color-main;
+	font-size: 1.4em;
+	font-weight: 300;
+}
+
+h1, h2 {	
+	font-family: $font-stack-heading;
+	text-transform: uppercase;
+}
+
+h2.heading {
+	text-align: center;
+	letter-spacing: 10px;
+	font-size: 3em;
+	position: relative;
+	span {
+		display: inline-block;
+		padding: 0 40px;
+		background: #C0392B;
+	}
+	&:before {
+		position: absolute;
+		left: 0;
+		content: '';
+		width: 750px;
+		height: 2px;
+		top: 50%;
+		z-index: -1;
+		background: $color-main;
+	}
+}
+
+a {
+	color: $color-main;
+}

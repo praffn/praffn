@@ -1,0 +1,89 @@
+#work {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+#work-container {
+	overflow: hidden;
+	box-shadow: inset 0 0 10px 0 rgba(black, .2);
+	background-size: 750px 432px;
+	border-radius: 10px;
+	transition: .2s ease;
+	position: relative;
+	ul {
+		list-style: none;
+		padding: 0;
+		text-align: center;
+		li {
+			display: inline-block;
+			margin: 70px 20px;
+			a {				
+				text-decoration: none;
+				&:hover .work_image {
+					box-shadow: inset 0 0 0 10px white;
+				}
+				.work_image {
+					box-shadow: 0 0 5px rgba(black, .3);
+					transition: box-shadow .1s ease;
+					height: 200px;
+					width: 200px;
+					border-radius: 50%;
+					margin-bottom: 10px;
+					background-size: 200px 200px;
+					&#cphguide {
+						background-image: url('../images/cphguide.jpg');
+					}
+					&#kanbanjo {
+						background-image: url('../images/kanbanjo.png');
+					}
+					&#svenskeren {
+						background-image: url('../images/svenskeren.png');
+					}
+				}
+				.work_title {
+					text-shadow: 0 0 5px rgba(black, .3);
+					font-size: .8em;
+					text-transform: uppercase;					
+					color: #fff;
+					font-weight: 700;
+					letter-spacing: 2px;
+				}
+				.work_description {
+					display: none;
+				}
+			}
+		}
+	}
+	.work_image_full {
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 750px;
+		height: 432px;
+		background-size: cover;
+		&#cphguide_full {
+			background-image: url('../images/cphguide_full.jpg');
+		}
+		&#kanbanjo_full {
+			background-image: url('../images/kanbanjo_full.jpg');
+		}
+		&#svenskeren_full {
+			background-image: url('../images/svenskeren_full.jpg');
+		}
+	}
+}
+
+#work_description {
+	position: relative;
+	height: 220px;
+	.description_how {
+		width: 100%;
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: .7;
+		font-style: italic;
+	}
+}

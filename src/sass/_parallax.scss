@@ -1,0 +1,40 @@
+#parallax {
+	height: 840px;
+	z-index: 10;
+	position: relative;
+}
+
+.parallax_layer {
+	background-position: center bottom;
+	background-size: 3000px 455px;
+	background-repeat: repeat-x;
+	position: fixed;
+	height: 840px;
+	width: 100%;
+}
+
+@for $i from 0 through 5 {
+	#layer_#{$i} {
+		background-image: url('../images/parallax/parallax-#{$i}.png');
+		
+	}
+}
+
+#layer_6 {
+  background-color: transparent;
+  background-image: url('../images/parallax/parallax-6.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-image: url('../images/parallax/parallax-6.png'), -webkit-linear-gradient(top, transparent 0, transparent 250px, #C0392B 250px);
+  background-image: url('../images/parallax/parallax-6.png'), linear-gradient(top, transparent 0, transparent 250px, #C0392B 250px);
+  background-position: center top, center bottom;
+  background-repeat: no-repeat, no-repeat;
+  height: 655px;
+  top: 385px;
+  margin-bottom: -255px;
+}
+
+
+body.touch .parallax_layer {
+	position: absolute;
+}

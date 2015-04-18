@@ -1,0 +1,39 @@
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	
+	#logo {
+		background-image: url('../images/praffn@2x.png');
+	}
+
+	@for $i from 0 through 5 {
+		#layer_#{$i} {
+			background-image: url('../images/parallax/parallax-#{$i}@2x.png');
+			
+		}
+	}
+
+	#layer_6 {
+	  background-image: url('../images/parallax/parallax-6@2x.png');
+	  background-image: url('../images/parallax/parallax-6@2x.png'), -webkit-linear-gradient(top, transparent 0, transparent 250px, #C0392B 250px);
+	  background-image: url('../images/parallax/parallax-6@2x.png'), linear-gradient(top, transparent 0, transparent 250px, #C0392B 250px);
+	}
+
+	#cphguide {
+		background-image: url('../images/cphguide@2x.jpg') !important;
+	}
+	#kanbanjo {
+		background-image: url('../images/kanbanjo@2x.png') !important;
+	}
+	#svenskeren {
+		background-image: url('../images/svenskeren@2x.png') !important;
+	}
+
+	#cphguide_full {
+		background-image: url('../images/cphguide_full@2x.jpg') !important;
+	}
+	#kanbanjo_full {
+		background-image: url('../images/kanbanjo_full@2x.jpg') !important;
+	}
+	#svenskeren_full {
+		background-image: url('../images/svenskeren_full@2x.jpg') !important;
+	}
+}

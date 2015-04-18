@@ -1,0 +1,24 @@
+#logo {
+	background-image: url('../images/praffn.png');
+	background-size: 600px 101px;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+  position: fixed;
+  z-index: -1;
+  top: 250px;
+  width: 100%;
+  height: 101px;
+}
+
+#main-content {
+	position: relative;
+	z-index: 15;
+	background: $color-background;
+	overflow: auto;
+}
+
+.container {
+	width: 750px;
+	margin: 0 auto;
+}

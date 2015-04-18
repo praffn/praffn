@@ -1,0 +1,32 @@
+#topnav {
+	height: 75px;
+	width: 100%;
+	position: fixed;
+	z-index: 101;
+	transition: background .3s ease;
+	ul {
+		text-align: center;
+		list-style: none;
+		margin: 0;
+		li {
+			height: 75px;
+			line-height: 75px;
+			padding: 0 20px;
+			display: inline-block;
+			transition: background .3s ease;
+			a {
+				font-weight: 100;
+				color: #fff;
+				font-size: 2.3em;
+				font-family: 'brandon-grotesque', 'helvetica neue', helvetica, sans-serif;
+				text-transform: uppercase;
+				text-decoration: none;
+				&:hover {
+				}
+			}
+		}
+	}
+	&.scrolled li:hover {
+		background: rgb(229, 96, 85);
+	}
+}
