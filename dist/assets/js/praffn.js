@@ -1,13 +1,11 @@
 $(document).ready(function() {
 	if (mobile) {
 		$('body').addClass('touch');
-	} else {
-		parallax();
-		menu();
-		$(document).scroll(scrollHandler);
 	}
 	$('#changeText').text('');
+	menu();
 	changeText();
+	$(document).scroll(scrollHandler);
 });
 
 var scrollVal = $(window).scrollTop();
@@ -15,9 +13,11 @@ var scrollVal = $(window).scrollTop();
 var mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 function scrollHandler(e) {
+	if (!mobile) {
+		parallax();
+	}
 	scrollVal = $(window).scrollTop();
 	menu();
-	parallax();
 }
 
 function menu() {

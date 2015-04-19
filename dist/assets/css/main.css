@@ -267,9 +267,58 @@ img.portrait {
       font-size: 3em; }
     #social li p {
       margin: 0;
-      opacity: .2;
+      opacity: 0;
       -webkit-transition: opacity .3s ease;
               transition: opacity .3s ease; }
+
+@media only screen and (max-width: 736px) {
+  h2.heading {
+    font-size: 1.2em; }
+  p {
+    font-size: .8em; }
+  #topnav {
+    display: none; }
+  #logo {
+    background-size: 90vw;
+    height: 50vh;
+    top: 0; }
+  #parallax {
+    height: 100vh; }
+  .parallax_layer {
+    bottom: 0;
+    background-size: 300vw;
+    background-position: center bottom; }
+    .parallax_layer#layer_6 {
+      background-image: url('../images/parallax/parallax-6.png');
+      margin: 0;
+      top: auto;
+      bottom: 0;
+      background-position: center bottom; }
+  .container {
+    width: 96vw; }
+  img.portrait {
+    width: 70vw;
+    height: 70vw; }
+  #work-container {
+    height: auto; }
+    #work-container .work_image_full {
+      display: none; }
+    #work-container ul li {
+      margin: 10px; }
+  #work_description {
+    display: none; }
+  #toolset li {
+    width: 30vw; }
+    #toolset li:last-of-type {
+      display: block;
+      margin: 0 auto; }
+    #toolset li p {
+      display: none; }
+  #social {
+    text-align: center; }
+    #social li {
+      width: 14vw;
+      font-size: .5em; } }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   #logo {

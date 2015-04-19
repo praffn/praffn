@@ -1,0 +1,82 @@
+@media only screen and (max-width: 736px) {
+	
+	h2.heading {
+		font-size: 1.2em;
+	}
+
+	p {
+		font-size: .8em;
+	}
+
+	#topnav {
+		display: none;
+	}
+
+	#logo {
+		background-size: 90vw;
+		height: 50vh;
+		top: 0;
+	}
+
+	#parallax {
+		height: 100vh;
+	}
+
+	.parallax_layer {
+		bottom: 0;
+		background-size: 300vw;
+		background-position: center bottom;
+		&#layer_6 {
+			background-image: url('../images/parallax/parallax-6.png');
+			margin: 0;
+			top: auto;
+			bottom: 0;
+			background-position: center bottom;
+		}
+	}
+
+	.container {
+		width: 96vw;
+	}
+
+	img.portrait {
+		width: 70vw;
+		height: 70vw;
+	}
+
+	#work-container {
+		height: auto;
+		.work_image_full {
+			display: none;
+		}
+		ul li {
+			margin: 10px;
+		}
+	}
+
+	#work_description {
+		display: none;
+	}
+
+	#toolset {
+		li {
+			width: 30vw;
+			&:last-of-type {
+				display: block;
+				margin: 0 auto;
+			}
+			p {
+				display: none;
+			}
+		}
+	}
+
+	#social {
+		text-align: center;
+		li {
+			width: 14vw;
+			font-size: .5em;
+		}
+	}
+
+}
