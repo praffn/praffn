@@ -86,4 +86,29 @@ $('#topnav a').click(function(e) {
 	}, 1000);
 });
 
+var currentPortrait = 0;
+var portraitImages = $('#portrait img');
+
+function rotatePortrait() {
+	portraitImages.css('opacity', 0);
+	$(portraitImages[currentPortrait]).css('opacity', 1);
+	$('#portrait-caption p').text($(portraitImages[currentPortrait]).attr('data-caption'));
+	if (currentPortrait == portraitImages.length - 1) {
+		currentPortrait = 0;
+	} else {
+		currentPortrait++;
+	}
+	setTimeout(rotatePortrait, 3000);
+}
+
+rotatePortrait();
+
+$('#role-selector select').change(changeRole);
+
+function changeRole() {
+	$('#role').text($('#role-selector select option:selected').attr('data-role'));
+}
+
+changeRole();
+
 

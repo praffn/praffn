@@ -39,9 +39,13 @@
 		width: 96vw;
 	}
 
-	img.portrait {
-		width: 70vw;
-		height: 70vw;
+	#portrait {
+		width: 80vw;
+		height: 80vw;
+		img {
+			width: 80vw;
+			height: 80vw;
+		}
 	}
 
 	#work-container {
