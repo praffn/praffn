@@ -2,11 +2,24 @@
 	margin-top: 50px;
 }
 
-img.portrait {
-	display: block;
+#portrait {
+	margin: 50px auto;
+	border: 10px solid #fff;
 	width: 320px;
 	height: 320px;
-	border: 10px solid white;
 	border-radius: 50%;
-	margin: 50px auto;
+	overflow: hidden;
+	position: relative;
+	img {
+		position: absolute;
+		width: 320px;
+		height: 320px;
+		opacity: 0;
+	}
+}
+
+#portrait-caption {
+	text-align: center;
+	font-style: italic;
+	opacity: .6;
 }

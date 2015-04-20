@@ -131,13 +131,24 @@ body.touch .parallax_layer {
 #hello {
   margin-top: 50px; }
 
-img.portrait {
-  display: block;
+#portrait {
+  margin: 50px auto;
+  border: 10px solid #fff;
   width: 320px;
   height: 320px;
-  border: 10px solid white;
   border-radius: 50%;
-  margin: 50px auto; }
+  overflow: hidden;
+  position: relative; }
+  #portrait img {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    opacity: 0; }
+
+#portrait-caption {
+  text-align: center;
+  font-style: italic;
+  opacity: .6; }
 
 #work {
   margin-top: 100px;
@@ -214,6 +225,17 @@ img.portrait {
             transform: translateY(-50%);
     opacity: .7;
     font-style: italic; }
+
+#role-selector select {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  height: 34px;
+  width: 280px;
+  font-family: 'proxima-nova';
+  font-weight: 900; }
 
 #toolset {
   list-style: none;
@@ -296,9 +318,12 @@ img.portrait {
       background-position: center bottom; }
   .container {
     width: 96vw; }
-  img.portrait {
-    width: 70vw;
-    height: 70vw; }
+  #portrait {
+    width: 80vw;
+    height: 80vw; }
+    #portrait img {
+      width: 80vw;
+      height: 80vw; }
   #work-container {
     height: auto; }
     #work-container .work_image_full {
