@@ -111,4 +111,8 @@ function changeRole() {
 
 changeRole();
 
+$("img.lazy").lazyload({
+    effect : "fadeIn"
+});
+
 
