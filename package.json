@@ -1,0 +1,22 @@
+{
+  "name": "praffn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/praffn/praffn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/praffn/praffn/issues"
+  },
+  "homepage": "https://github.com/praffn/praffn",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
