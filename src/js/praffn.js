@@ -1,9 +1,12 @@
 $(document).ready(function() {
 	if (mobile) {
 		$('body').addClass('touch');
+		$('a.topnav_toggle').click(toggleMobileMenu);
 	}
 	$('#changeText').text('');
-	menu();
+	if (!mobile) {
+		menu();
+	}
 	changeText();
 	$(document).scroll(scrollHandler);
 });
@@ -15,9 +18,9 @@ var mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.te
 function scrollHandler(e) {
 	if (!mobile) {
 		parallax();
+		menu();
 	}
 	scrollVal = $(window).scrollTop();
-	menu();
 }
 
 function menu() {
@@ -66,11 +69,11 @@ setInterval(changeText, 4000);
 
 $('#work a').hover(function() {
 	$('.work_image_full').stop().fadeOut();
-	$($(this).attr('data-image')).stop().fadeIn();	
+	$($(this).attr('data-image')).stop().fadeIn();
 
 	var desc = $(this).children('.work_description').html();
 
-	
+
 
 	if(desc != $('#work_description').html()) {
 		$('#work_description').stop().fadeOut(300, function() {
@@ -79,7 +82,7 @@ $('#work a').hover(function() {
 	}
 });
 
-$('#topnav a').click(function(e) {
+$('#topnav ul a').click(function(e) {
 	e.preventDefault();
 	$('html, body').stop().animate({
 		scrollTop: $($(this).attr('href')).offset().top -100
@@ -109,10 +112,16 @@ function changeRole() {
 	$('#role').text($('#role-selector select option:selected').attr('data-role'));
 }
 
+function toggleMobileMenu(e) {
+	e.preventDefault();
+	$('#topnav ul a').off('click', toggleMobileMenu);
+	$('#topnav ul').toggle();
+	$('#topnav').toggleClass('toggled');
+	if ($('#topnav').hasClass('toggled')) {
+		$('#topnav ul a').on('click', toggleMobileMenu);
+	}
+}
+
+
 changeRole();
-
-$("img.lazy").lazyload({
-    effect : "fadeIn"
-});
-
 

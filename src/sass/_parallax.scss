@@ -16,7 +16,7 @@
 @for $i from 0 through 5 {
 	#layer_#{$i} {
 		background-image: url('../images/parallax/parallax-#{$i}.png');
-		
+
 	}
 }
 

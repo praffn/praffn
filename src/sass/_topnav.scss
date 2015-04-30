@@ -4,6 +4,11 @@
 	position: fixed;
 	z-index: 101;
 	transition: background .3s ease;
+	a.topnav_toggle {
+		display: none;
+		svg {
+		}
+	}
 	ul {
 		text-align: center;
 		list-style: none;
@@ -28,5 +33,20 @@
 	}
 	&.scrolled li:hover {
 		background: rgb(229, 96, 85);
+	}
+}
+
+body.touch {
+	position: relative;
+	a.topnav_toggle {
+		position: absolute;
+		z-index: 999;
+		top: 10px;
+		right: 10px;
+		display: block !important;
+		svg {
+			width: 32px;
+			opacity: .5;
+		}
 	}
 }
